@@ -22,12 +22,13 @@ class LinkedList {
       this.headNode = currentNode.nextNode; // if we want to remove the head
     } else {
       while (currentNode) {
+        // if we want to remove anything else
         let next = currentNode.nextNode;
         if (next.data === data) {
           currentNode.nextNode = next.nextNode;
           currentNode = null;
         } else {
-          currentNode = next;
+          currentNode = next; // if the data is not the one we want to delete, we jump into the next node
         }
       }
     }
